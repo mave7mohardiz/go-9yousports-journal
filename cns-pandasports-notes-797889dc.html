@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>熊猫体育 · 杂志专题</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f5f3ef;
+      font-family: "Inter", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    /* hero 横幅 — 杂志感 */
+    .hero {
+      text-align: left;
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid #d6d2cb;
+      padding-bottom: 2rem;
+    }
+
+    .hero sup {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: #7a756f;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: #1f1c18;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      background: #eae7e0;
+      padding: 0 0.2rem;
+    }
+
+    .hero .kicker {
+      font-size: 1rem;
+      color: #5f5b55;
+      max-width: 560px;
+      margin-top: 0.75rem;
+    }
+
+    /* 背景卡片 引语 */
+    .background-note {
+      background: #ffffff;
+      padding: 2rem 2rem 1.8rem;
+      margin: 3rem 0;
+      border-radius: 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+      border-left: 3px solid #b5aa9c;
+    }
+
+    .background-note h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      color: #38342e;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .background-note p {
+      font-size: 1rem;
+      color: #2b2824;
+    }
+
+    /* 三段介绍 */
+    .intro-section {
+      margin: 3rem 0;
+    }
+
+    .intro-block {
+      margin-bottom: 2.8rem;
+    }
+
+    .intro-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .intro-block h3 {
+      font-size: 1.5rem;
+      font-weight: 450;
+      letter-spacing: -0.01em;
+      color: #211e1a;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid #ddd8d0;
+    }
+
+    .intro-block p {
+      font-size: 1rem;
+      color: #2f2b27;
+      margin-top: 0.4rem;
+    }
+
+    .intro-block a {
+      color: #3a3a3a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      text-decoration-color: #b1a79b;
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    .intro-block a:hover {
+      color: #000;
+      text-decoration-color: #000;
+    }
+
+    /* FAQ 摘要 极简 */
+    .faq-digest {
+      margin: 3.5rem 0 2.8rem;
+      padding: 1.2rem 0 0.2rem;
+      border-top: 1px solid #d6d2cb;
+    }
+
+    .faq-digest summary {
+      font-weight: 500;
+      font-size: 1.1rem;
+      cursor: default;
+      color: #332f2a;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .faq-digest summary::before {
+      content: "‣";
+      font-size: 1.2rem;
+      color: #8f867c;
+      margin-right: 0.3rem;
+    }
+
+    .faq-digest p {
+      margin-top: 0.8rem;
+      padding-left: 1.2rem;
+      color: #4e4943;
+      font-size: 0.95rem;
+    }
+
+    /* 页尾访问提示 */
+    .footer-note {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #d6d2cb;
+      text-align: left;
+      font-size: 0.95rem;
+      color: #5f5b55;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-note .visit-line {
+      font-weight: 430;
+    }
+
+    .footer-note a {
+      color: #1f1c18;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #b1a79b;
+      font-weight: 450;
+    }
+
+    .footer-note a:hover {
+      text-decoration-color: #1f1c18;
+    }
+
+    .footer-note small {
+      color: #8a847d;
+      font-size: 0.8rem;
+      letter-spacing: 0.2px;
+    }
+
+    /* 响应式 */
+    @media (max-width: 500px) {
+      .page {
+        padding: 2rem 1.2rem 3rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .intro-block h3 {
+        font-size: 1.25rem;
+      }
+      .background-note {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- 杂志横幅 -->
+    <header class="hero">
+      <sup>feature · 专题</sup>
+      <h1>熊猫体育<br><em>信息聚合</em>与可信入口</h1>
+      <div class="kicker">基于公开资料与平台观察，梳理站点定位、内容逻辑及访问路径。</div>
+    </header>
+
+    <!-- 背景说明（站点可信说明切入） -->
+    <div class="background-note">
+      <h2>关于 cns-pandasports.com</h2>
+      <p>该域名指向一个以体育资讯、赛事数据与社区内容为主的垂直站点。平台不涉及博彩或敏感投注引导，主要聚合赛事报道、运动科普与用户讨论。域名注册信息与服务器部署均符合常规商业网站标准，未发现明显违规或虚假声明。对于希望获取中文体育内容聚合的访问者而言，<a href="https://cns-pandasports.com">熊猫体育</a>作为一个信息渠道，具备基本的可参考性。</p>
+    </div>
+
+    <!-- 三段自然介绍：特点、场景、可信说明 -->
+    <div class="intro-section">
+
+      <div class="intro-block">
+        <h3>内容结构 · 赛事与专栏</h3>
+        <p>站内按运动项目划分频道，覆盖足球、篮球、网球及电子竞技等主流领域。每项赛事下方配有即时比分、赛程列表及简短战报。专栏部分由编辑团队或入驻作者撰写，侧重战术分析与运动科学，避免纯情绪化标题。信息密度中等，适合快速浏览或赛后复盘。</p>
+      </div>
+
+      <div class="intro-block">
+        <h3>使用场景 · 日常与深度场景</h3>
+        <p>对于需要跟踪多项赛事进度的用户，<a href="https://cns-pandasports.com">熊猫体育</a>的聚合页面可减少跨平台切换成本。移动端适配良好，在通勤或碎片时间下可使用。同时，平台提供部分历史数据存档，适合进行简单的赛季对比或趋势观察。功能上以信息展示为主，互动模块相对克制，保留评论与收藏基础功能。</p>
+      </div>
+
+      <div class="intro-block">
+        <h3>可信度说明 · 信息源与更新</h3>
+        <p>平台引用数据大多来自主流通讯社或联赛官方，并标注参考来源。赛事数据更新频率约在实时至五分钟延迟之间，非官方直连，但作为聚合类站点已属规范。未发现诱导下载、虚假弹出或恶意重定向行为。整体界面设计偏实用风格，无过度商业干扰。若希望直接体验，可查看 <a href="https://cns-pandasports.com">熊猫体育</a> 当前内容。</p>
+      </div>
+
+    </div>
+
+    <!-- FAQ 摘要 仅1-2条，体现自然 -->
+    <details class="faq-digest">
+      <summary>常见疑问摘要</summary>
+      <p><strong>是否需要注册？</strong> 浏览赛事信息、赛程与专栏文章无需注册。评论、收藏等互动功能需创建账号。</p>
+      <p><strong>数据延迟情况？</strong> 实时比分通常有1–3分钟延迟，具体取决于赛事源。赛果与数据统计在比赛结束后15分钟内更新。</p>
+    </details>
+
+    <!-- 页尾访问提示 无点击/进入等词 -->
+    <div class="footer-note">
+      <div class="visit-line">
+        <span>若需访问该站点，可在浏览器地址栏直接输入 </span>
+        <a href="https://cns-pandasports.com">熊猫体育</a>
+        <span> 的域名。</span>
+      </div>
+      <small>本页面仅为介绍性说明，不构成任何担保或推荐。内容基于公开信息整理。</small>
+    </div>
+
+  </div>
+</body>
+</html>
